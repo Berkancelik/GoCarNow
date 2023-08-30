@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="CorePersistance">
+      <HintPath>..\..\..\corePackages\CorePackages\CorePersistance\bin\Debug\net7.0\CorePersistance.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
