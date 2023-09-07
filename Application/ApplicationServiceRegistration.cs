@@ -12,6 +12,8 @@ namespace Application
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
             services.AddMediatR(configuration =>
             {
                 configuration.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly());
