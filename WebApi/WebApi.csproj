@@ -8,12 +8,19 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.10" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\Persistance\Persistance.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Core.Application">
+      <HintPath>..\..\..\corePackages\CorePackages\Core.Application\bin\Debug\net7.0\Core.Application.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
