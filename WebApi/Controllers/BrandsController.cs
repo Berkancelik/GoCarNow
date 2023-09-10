@@ -35,5 +35,13 @@ namespace WebApi.Controllers
             return Ok(response);
         }
 
+        [HttpPut]
+        public async Task<IActionResult> Update([FromBody] CreateBrandCommand createBrandCommand)
+        {
+            CreatedBrandResponse response = await Mediator.Send(createBrandCommand);
+            return Ok(response);
+        }
+
+
     }
 }
