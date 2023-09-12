@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Brands.Commands.Delete
 {
-    internal class DeleteBrandResponse
+    public class DeleteBrandResponse
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

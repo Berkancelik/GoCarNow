@@ -19,7 +19,7 @@ namespace Persistance.EntityConfigurations
             builder.Property(b => b.Name).HasColumnName("Name").IsRequired();
             builder.Property(b => b.BrandId).HasColumnName("BrandId").IsRequired();
             builder.Property(b => b.FuelId).HasColumnName("FuelId").IsRequired();
-            builder.Property(b => b.TransmissionsId).HasColumnName("TransmissionId").IsRequired();
+            builder.Property(b => b.TransmissionId).HasColumnName("TransmissionId").IsRequired();
             builder.Property(b => b.DailyPrice).HasColumnName("DailyPrice").IsRequired();
             builder.Property(b => b.ImageUrl).HasColumnName("ImageUrl").IsRequired();
 

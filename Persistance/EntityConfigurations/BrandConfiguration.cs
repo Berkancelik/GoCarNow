@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Persistance.EntityConfigurations
 {
+
     public class BrandConfiguration : IEntityTypeConfiguration<Brand>
     {
         public void Configure(EntityTypeBuilder<Brand> builder)
@@ -28,3 +29,4 @@ namespace Persistance.EntityConfigurations
             builder.HasQueryFilter(b => !b.DeletedDate.HasValue);
         }
     }
+}
