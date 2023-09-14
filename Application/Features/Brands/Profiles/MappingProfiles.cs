@@ -30,7 +30,7 @@ namespace Application.Features.Brands.Profiles
 
 
             CreateMap<Brand, GetListBrandListItemDto>().ReverseMap();
-            CreateMap<Brand, GetByIdBrandResponse>().ReverseMap();
+            CreateMap<Brand, GetListResponse>().ReverseMap();
             CreateMap<Paginate<Brand>, GetListResponse<GetListBrandListItemDto>>().ReverseMap();
         }
     }

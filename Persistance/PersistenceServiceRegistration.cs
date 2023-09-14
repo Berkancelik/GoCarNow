@@ -20,6 +20,7 @@ namespace Persistance
             services.AddDbContext<BaseDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("GoCarNow")));
 
             services.AddScoped<IBrandRepository, BrandRepository>();
+            services.AddScoped<IModelRepository, ModelRepository>();
  
             return services;
         }

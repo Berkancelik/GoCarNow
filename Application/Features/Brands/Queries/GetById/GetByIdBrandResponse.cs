@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Brands.Queries.GetById
 {
-    public class GetByIdBrandResponse
+    public class GetListResponse
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

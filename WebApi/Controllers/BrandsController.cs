@@ -32,7 +32,7 @@ namespace WebApi.Controllers
         public async Task<IActionResult> GetById([FromRoute] Guid id)
         {
             GetByIdBrandQuery getByIdBrandQuery = new() { Id = id };
-            GetByIdBrandResponse response = await Mediator.Send(getByIdBrandQuery);
+            GetListResponse response = await Mediator.Send(getByIdBrandQuery);
             return Ok(response);
         }
 
