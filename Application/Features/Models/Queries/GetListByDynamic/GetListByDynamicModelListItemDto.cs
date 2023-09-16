@@ -16,4 +16,4 @@ namespace Application.Features.Models.Queries.GetListByDynamic
         public decimal DailyPrice { get; set; }
         public string ImageUrl { get; set; }
     }
-}
+} 

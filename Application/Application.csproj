@@ -7,8 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Brands\Constants\" />
-    <Folder Include="Features\Brands\Rules\" />
     <Folder Include="Features\Models\Commands\" />
     <Folder Include="Features\Models\Constants\" />
     <Folder Include="Features\Models\Rules\" />
@@ -28,6 +26,9 @@
   <ItemGroup>
     <Reference Include="Core.Application">
       <HintPath>..\..\..\corePackages\CorePackages\Core.Application\bin\Debug\net7.0\Core.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.CrossCuttingConcerns">
+      <HintPath>..\..\..\corePackages\CorePackages\Core.CrossCuttingConcerns\bin\Debug\net7.0\Core.CrossCuttingConcerns.dll</HintPath>
     </Reference>
     <Reference Include="CorePersistance">
       <HintPath>..\..\..\corePackages\CorePackages\CorePersistance\bin\Debug\net7.0\CorePersistance.dll</HintPath>

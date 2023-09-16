@@ -1,6 +1,8 @@
 ﻿using Application.Features.Models.Queries.GetList;
+using Application.Features.Models.Queries.GetListByDynamic;
 using Core.Application.Requests;
 using Core.Application.Responses;
+using CorePersistance.Dynamic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
