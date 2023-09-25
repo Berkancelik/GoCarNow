@@ -1,5 +1,8 @@
 ﻿using Application.Features.Brands.Rules;
+using Core.Application.Pipelines.Transaction;
+using Core.Application.Pipelines.Validation;
 using Core.Application.Rules;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -15,21 +18,28 @@ namespace Application
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
             services.AddSubClassesOfType(Assembly.GetExecutingAssembly(), typeof(BaseBusinessRules));
+
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
             services.AddMediatR(configuration =>
             {
-                configuration.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly());
+                configuration.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+
+                configuration.AddOpenBehavior(typeof(RequestValidationBehavior<,>));
+                configuration.AddOpenBehavior(typeof(TransactionScopeBehavior<,>));
             });
 
             return services;
         }
 
         public static IServiceCollection AddSubClassesOfType(
-     this IServiceCollection services,
-     Assembly assembly,
-     Type type,
-     Func<IServiceCollection, Type, IServiceCollection>? addWithLifeCycle = null)
+           this IServiceCollection services,
+           Assembly assembly,
+           Type type,
+           Func<IServiceCollection, Type, IServiceCollection>? addWithLifeCycle = null
+       )
         {
             var types = assembly.GetTypes().Where(t => t.IsSubclassOf(type) && type != t).ToList();
             foreach (var item in types)
