@@ -32,7 +32,10 @@ namespace Application
                 configuration.AddOpenBehavior(typeof(TransactionScopeBehavior<,>));
                 configuration.AddOpenBehavior(typeof(CachingBehavior<,>));
                 configuration.AddOpenBehavior(typeof(CacheREmovingBehavior<,>));
+                configuration.AddOpenBehavior(typeof(LoggingBehavior<,>));
             });
+
+            services.AddSingeton<LoggerServiceBase, FileLogger>();
 
             return services;
         }

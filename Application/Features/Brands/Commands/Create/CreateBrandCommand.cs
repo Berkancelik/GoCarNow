@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Brands.Commands.Create
 {
-    public class CreateBrandCommand : IRequest<CreatedBrandResponse>, ITransactionalRequest,ICacheRemoverRequest
+    public class CreateBrandCommand : IRequest<CreatedBrandResponse>, ITransactionalRequest,ICacheRemoverRequest,IloggableRequest
     {
         public string Name { get; set; }
 
